@@ -15,7 +15,7 @@ def factorielle(n):
 
 print(factorielle(5)) # 120
 
-
+#------------------------Exo 2---------------------------------------------#
 """
 Somme des n premiers nombres
 Écrivez une fonction récursive qui calcule la somme des nombres de 1 à n.
@@ -32,6 +32,28 @@ def somme(n):
 n = 5
 somme_prem = somme(n)
 print(f"la somme de n premiers nombres de {n} est {somme_prem}")
+#------------------------Exo 3---------------------------------------------#
+
+"""
+Compter les éléments d’une liste
+Écrivez une fonction récursive qui compte le nombre d’éléments dans une liste.
+"""
+def count_liste(my_list:list):
+    compteur = 0
+    if len(my_list) == 0:
+        return 0
+    else:
+        compteur += 1
+        return compteur + count_liste(my_list[1:])
+my_list = ["maman","papa",4,6,7,8,9]
+nombre_element = count_liste(my_list)
+print(f"le nombre d'éléments dans la liste est de: {nombre_element} ")
+
+
+
+
+
+
 
 
 
